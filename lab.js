@@ -26,10 +26,7 @@ console.log(numberString, typeof numberString);
 var mixedArray = [10, '34', 3, '17'];
 // Todo write a function to convert the mixed array to an array of only numbers
 var stringToNum = function (arr) {
-    for (var i = 0; i < arr.length; i++) {
-        arr[i] = parseInt(arr[i]);
-    }
-    return arr;
+    return arr.map(function (element) { return Number(element); });
 };
 console.log(stringToNum(mixedArray));
 var seattle = ['Seattle', 47.6, 122.2];
